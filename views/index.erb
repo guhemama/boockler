@@ -1,0 +1,20 @@
+<h2>Reading (<%= @books_reading.count %>)</h2>
+<ul>
+  <% @books_reading.each do |book| %>
+    <li><a href="<%= base_url %>/edit/<%= book.id %>"><%= book.title %></a></li>
+  <% end %>
+</ul>
+
+<h2>Unread (<%= @books_unread.count %>)</h2>
+<ul>
+  <% @books_unread.each do |book| %>
+    <li><a href="<%= base_url %>/edit/<%= book.id %>"><%= book.title %></a></li>
+  <% end %>
+</ul>
+
+<h2>Read (<%= @books_read.count %>)</h2>
+<ul>
+  <% @books_read.each do |book| %>
+    <li><a href="<%= base_url %>/edit/<%= book.id %>"><%= book.title %></a></li>
+  <% end %>
+</ul>

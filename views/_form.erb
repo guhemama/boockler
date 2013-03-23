@@ -1,0 +1,19 @@
+<form method="post">
+  <p>
+    <label for="title">Title</label>
+    <input type="text" name="book[title]" id="title" value="<%= @book.title %>" />
+  </p>
+  
+  <p>
+    <label for="title">Status</label>
+    <select type="text" name="book[status]" id="status">
+        <option value="unread" <%= 'selected="selected"' if @book.status == 'unread' %>">Unread</option>
+        <option value="reading" <%= 'selected="selected"' if @book.status == 'reading' %>">Reading</option>
+        <option value="read" <%= 'selected="selected"' if @book.status == 'read' %>">Read</option>
+    </select>
+  </p>
+  
+  <p>
+    <input type="submit" id="submit" value="Save" />
+  </p>
+</form>

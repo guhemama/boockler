@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>My Personal Library</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Gabriela' rel='stylesheet' type='text/css'>    
+    <script type="text/javascript" src="/assets/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="content">
+        <h1>My personal library</h1>
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a href="<%= base_url %>/">My books</a></li>
+                <% if session[:auth] %>
+                    <li><a href="<%= base_url %>/new">Add book</a></li>
+                    <li><a href="<%= base_url %>/logout">Logout</a></li>
+                <% else %>
+                    <li><a href="<%= base_url %>/login">Login</a></li>
+                <% end %>
+            </ul>
+        </nav>
+
+        <% if session[:message] %>
+        <div class="alert">
+            <button type="button" class="close">×</button>
+            <%= session[:message] %> 
+            <% session[:message] = nil %>
+        </div>
+        <% end %>
+
+        <%= yield %>
+    </div>
+</body>
+</html>
+

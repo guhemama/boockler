@@ -1,0 +1,145 @@
+* {
+    font-family: 'Gabriela', serif;
+}
+
+#content {
+    width: 500px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 30px 50px;
+    color: #666;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+body {
+    background-color: #eee;
+}
+
+form {
+    overflow: hidden;
+    margin: 10px 0 0 0;
+}
+form p {
+    overflow: hidden;
+    margin: 0 0 5px 0;
+}
+form label {
+    width: 80px;
+    padding: 8px 10px 0 0;
+    float: left;
+    clear: left;
+    text-align: right;
+}
+form input, form select {
+    font-size: 1em;
+    padding: 5px;
+    float: left;
+}
+form input#submit {
+    margin: 0 0 0 90px;
+    clear: both;
+}
+
+ul li {
+    margin: 0 0 10px 0;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    border-bottom: 1px dotted #666;
+}
+
+table {
+}
+table tbody {
+}
+table tbody tr {
+    
+}
+table tbody tr td {
+    padding: 5px 0;
+}
+table tbody tr td a {
+}
+
+#main-nav {
+    width: 100%;
+    
+}
+#main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px dotted #ccc;
+}
+#main-nav ul li {
+    float: left;
+}
+#main-nav ul li a {
+    color: #333;
+    margin: 0 20px 0 0;
+}
+#main-nav ul li a:hover {
+    border-bottom: 1px dotted #333;
+}
+
+.alert {
+  border-radius: 10px;
+  padding: 8px 15px;
+  margin: 10px 0;
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  position: relative;
+  cursor: pointer;
+}
+.alert .close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  line-height: 20px;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.alert:hover .close,
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
+.page-head {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.page-head h2 {
+  display: inline-block;
+  float: left;
+}
+.book-delete {
+  cursor: pointer;
+  float: right;
+  margin: 25px 0 0 0;
+}

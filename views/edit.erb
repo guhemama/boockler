@@ -1,0 +1,6 @@
+<div class="page-head">
+  <h2>Edit book</h2>
+  <a class="book-delete" data-url="<%= base_url + '/delete/' + @book.id.to_s %>">Delete</a>
+</div>
+
+<%= erb :_form %>
