@@ -5,6 +5,14 @@
   <% end %>
 </ul>
 
+<h2>Next (<%= @books_next.count %>)</h2>
+<ul>
+  <% @books_next.each do |book| %>
+    <li><a href="<%= base_url %>/edit/<%= book.id %>"><%= book.title %></a></li>
+  <% end %>
+</ul>
+
+
 <h2>Unread (<%= @books_unread.count %>)</h2>
 <ul>
   <% @books_unread.each do |book| %>

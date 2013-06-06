@@ -1,29 +1,31 @@
 GEM
+  remote: https://rubygems.org/
   specs:
-    activemodel (3.2.12)
-      activesupport (= 3.2.12)
+    activemodel (3.2.13)
+      activesupport (= 3.2.13)
       builder (~> 3.0.0)
-    activerecord (3.2.12)
-      activemodel (= 3.2.12)
-      activesupport (= 3.2.12)
+    activerecord (3.2.13)
+      activemodel (= 3.2.13)
+      activesupport (= 3.2.13)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activesupport (3.2.12)
-      i18n (~> 0.6)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
     erubis (2.7.0)
-    i18n (0.6.4)
-    multi_json (1.7.1)
+    i18n (0.6.1)
+    multi_json (1.7.6)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
-    sinatra (1.4.1)
+    sinatra (1.4.2)
       rack (~> 1.5, >= 1.5.2)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
-    tilt (1.3.6)
+    sqlite3 (1.3.7)
+    tilt (1.4.1)
     tzinfo (0.3.37)
 
 PLATFORMS
@@ -31,5 +33,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  bundler
   erubis
   sinatra
+  sqlite3

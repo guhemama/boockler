@@ -9,6 +9,7 @@
     <select type="text" name="book[status]" id="status">
         <option value="unread" <%= 'selected="selected"' if @book.status == 'unread' %>">Unread</option>
         <option value="reading" <%= 'selected="selected"' if @book.status == 'reading' %>">Reading</option>
+        <option value="next" <%= 'selected="selected"' if @book.status == 'next' %>">Next</option>
         <option value="read" <%= 'selected="selected"' if @book.status == 'read' %>">Read</option>
     </select>
   </p>

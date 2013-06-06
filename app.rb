@@ -1,28 +1,14 @@
 require 'sinatra'
 require 'active_record'
-
-# App configs
-enable :sessions
-APP_PASS = '123456'
-
-ActiveRecord::Base.establish_connection(
-  adapter:  'sqlite3',
-  database: 'app.db'
-)
- 
-# App models
-class Book < ActiveRecord::Base
-  attr_accessible :title, :status
-  
-  validates :title, presence: true
-  validates :status, inclusion: { in: ['read', 'unread', 'reading'] }
-end
+require_relative 'config'
+require_relative 'models/book'
 
 # Index route
 get '/' do                   
-  @books_reading = Book.where(status: 'reading').order('title ASC')
-  @books_unread  = Book.where(status: 'unread').order('title ASC')
-  @books_read    = Book.where(status: 'read').order('title ASC')
+  @books_reading = Book.find_by_status 'reading'
+  @books_unread  = Book.find_by_status 'unread'
+  @books_read    = Book.find_by_status 'read'
+  @books_next    = Book.find_by_status 'next'
   erb :index
 end
 
